@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: url("../images/sample.jpg"); */
+}
+
+.products-page,
+.posts-page {
+  min-height: 50vh;
+}
+
+.order-content {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.order-content .header {
+  font-size: large;
+  text-transform: uppercase;
+  margin-right: 20px !important;
+}
+
+.pagination-wrapper {
+  padding: 3em 0;
+}
+
+.StripeElement {
+  width: 100%;
+  padding: 0.8em 1em 0.6em;
+  background-color: #e3dada;
+  box-sizing: border-box;
+  border: 1px solid #e3dada;
+  position: relative;
+  margin-bottom: 1.8em;
+}
