@@ -1,7 +1,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 
-import JoinUs from "./join-us";
-import Shop from "./shop";
+// import JoinUs from "./join-us";
+// import Shop from "./shop";
 import Feed from "./feed";
 
 function App() {
