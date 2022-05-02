@@ -17,7 +17,6 @@ import {
 } from "semantic-ui-react";
 import { FetchPosts, RemovePost } from "./actions";
 import { GlobalContext } from "./global-context";
-import { SERVER_URL } from "../services/axios";
 import socket from "../services/socket";
 
 const emptyObj = {};
@@ -70,9 +69,7 @@ const Feeds = () => {
   const onPageChange = (ev, { activePage }) => setPage(activePage);
 
   useEffect(() => {
-    console.log(socket);
     socket.on("connected", (arg, cb) => {
-      console.log(arg);
       cb("Thank you server");
     });
   }, []);
@@ -135,7 +132,7 @@ const Feeds = () => {
                   {posts.map(({ id, title, content, creator, imageUrl }) => (
                     <Card
                       key={`post-${id}`}
-                      image={`${SERVER_URL}${imageUrl}`}
+                      image={imageUrl}
                       header={title}
                       meta={creator}
                       description={content}

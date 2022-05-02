@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Header, Button, Card, Icon } from "semantic-ui-react";
-import { SERVER_URL } from "../services/axios";
 
 import { FetchPost } from "./actions";
 
@@ -29,7 +28,7 @@ export default () => {
       <Container>
         <Card
           key={`post-${id}`}
-          image={`${SERVER_URL}${imageUrl}`}
+          image={imageUrl}
           header={title}
           meta={creator}
           description={content}

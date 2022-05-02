@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Container, Form, Grid, GridColumn, GridRow, TextArea, Button, Header, Image } from "semantic-ui-react";
 import { CreatePost, UpdatePost, FetchPost } from "./actions";
-import { SERVER_URL } from "../services/axios";
 
 const defaultObj = {};
 
@@ -54,7 +53,7 @@ const AddEditPost = () => {
                 <label>Title</label>
                 <input name="title" placeholder="Title" defaultValue={title} />
               </Form.Field>
-              {editMode && <Image src={`${SERVER_URL}${imageUrl}`} size="small" />}
+              {editMode && <Image src={imageUrl} size="small" />}
               <Form.Field>
                 <label>Image</label>
                 <input name="image" type="file" placeholder="Upload File" />
